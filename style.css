@@ -1,0 +1,158 @@
+/* Base Reset */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #2c3e50, #4ca1af);
+}
+
+/* Main vertical layout */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 40px;
+  height: 100vh;
+  padding-top: 30px;
+}
+
+/* Title heading styling */
+.calculator-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  padding: 15px 30px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Calculator + history horizontal layout */
+.calculator-wrapper {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Calculator Container */
+.calculator {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  padding: 20px;
+  width: 320px;
+}
+
+/* Display Styling */
+#display {
+  width: 100%;
+  padding: 15px;
+  font-size: 2rem;
+  text-align: right;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 20px;
+  outline: none;
+}
+
+/* Grid of Buttons */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+/* Button Base */
+button {
+  padding: 20px;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: inset -1px -1px 5px rgba(255, 255, 255, 0.1),
+              inset 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Operator Buttons */
+button.operator {
+  background: #f39c12;
+  color: white;
+}
+
+button.operator:hover {
+  background: #e67e22;
+}
+
+/* Equals Button */
+button.equals {
+  background: #27ae60;
+  color: white;
+}
+
+button.equals:hover {
+  background: #2ecc71;
+}
+
+/* Clear Button */
+button.clear {
+  background: #e74c3c;
+  color: white;
+}
+
+button.clear:hover {
+  background: #c0392b;
+}
+
+/* History Panel */
+.history {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 15px;
+  width: 200px;
+  height: 420px;
+  overflow-y: auto;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  color: white;
+}
+
+.history h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#history-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#history-list li {
+  margin-bottom: 10px;
+  padding: 6px 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  word-break: break-word;
+}
